@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meine Webseite</title>
+    <!-- Verknüpfung zur CSS-Datei -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<!-- Ihr PHP-Code geht hier -->
+
 <?php
     // Starte die Pufferung
     ob_start();
@@ -74,3 +84,6 @@
     // Beende das Skript hier und verhindere weitere Ausführung
     exit();
 ?>
+
+</body>
+</html>

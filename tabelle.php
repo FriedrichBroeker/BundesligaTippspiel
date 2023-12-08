@@ -15,7 +15,7 @@
 <body>
     
     <div class="header-container">
-        <a href="tippen.html" id="top-right-button">Tippe jetzt!</a>
+        <a href="welcome.php" id="top-right-button">Tippe jetzt!</a>
         <img src="https://www.designtagebuch.de/wp-content/uploads/mediathek//2017/12/bundesliga-logo.png" alt="Bundesliga Logo" class="bundesliga-logo">
         <h1>Aktuelle Bundesliga Tabelle</h1>
     </div>
