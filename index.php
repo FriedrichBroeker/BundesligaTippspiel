@@ -12,6 +12,7 @@
     <body>
         
         <div id="form">
+     
             <h1>Bundesliga-Tippspiel</h1>
             <form name="form" action="login.php" onsubmit="return isvalid()" method="POST">
                 <label>Username: </label>
@@ -26,15 +27,15 @@
                 var user = document.form.user.value;
                 var pass = document.form.pass.value;
                 if(user.length=="" && pass.length==""){
-                    alert(" Username and password field is empty!!!");
+                    alert("Benutzername und Passwortfeld muss ausgefüllt werden!!!");
                     return false;
                 }
                 else if(user.length==""){
-                    alert(" Username field is empty!!!");
+                    alert("Benutzername-Feld musss ausgefüllt sein!!!");
                     return false;
                 }
                 else if(pass.length==""){
-                    alert(" Password field is empty!!!");
+                    alert("Passwort-Feld muss ausgefüllt sein!!!");
                     return false;
                 }
                 
