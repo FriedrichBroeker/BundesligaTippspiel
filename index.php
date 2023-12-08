@@ -14,6 +14,10 @@
 </head>
 <body>
     
+    <div id="logo-container" style="display:none">
+        <img src="logo.png" alt="Logo">
+    </div>
+
     <div class="header-container">
         <a href="index2.php" id="top-right-button">Tippe jetzt!</a>
         <img src="https://www.designtagebuch.de/wp-content/uploads/mediathek//2017/12/bundesliga-logo.png" alt="Bundesliga Logo" class="bundesliga-logo">

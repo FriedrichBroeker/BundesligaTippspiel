@@ -266,10 +266,46 @@ tr:hover {
     border-radius: 6px;
 }
 #btn{
+    font-family: 'Rubik', sans-serif;
     color: white;
     background-color: darkred;
     padding: 10px;
-    font-family: 'Rubik', sans-serif;
-    
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes expandFade {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: scale(18);
+        opacity: 0;
+    }
+}
+
+#logo-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: leichter Overlay-Hintergrund */
+    z-index: 1000; /* Hoch genug, um über anderen Elementen zu stehen */
+    animation: expandFade 1s;
+}
+
+
+#logo-container img {
+    max-width: 100px; /* oder die gewünschte Breite */
+    height: auto; /* behält das Seitenverhältnis bei */
 }
 

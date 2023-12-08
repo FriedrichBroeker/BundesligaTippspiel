@@ -96,3 +96,19 @@ document.addEventListener('DOMContentLoaded', function() {
     // tabelle anzeigen
     fetchTable();
 });
+
+
+document.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault(); // Verhindert die sofortige Weiterleitung
+        const newUrl = this.href;
+
+        // Zeigt das Logo an
+        document.getElementById('logo-container').style.display = 'flex';
+
+        // Verzögert die Weiterleitung
+        setTimeout(function() {
+            window.location = newUrl;
+        }, 1000); // Dauer der Animation
+    });
+});

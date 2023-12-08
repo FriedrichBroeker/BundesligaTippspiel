@@ -6,6 +6,11 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+   
+    <div id="logo-container" style="display:none">
+            <img src="logo.png" alt="Logo">
+    </div>
+
 <!-- Ihr PHP-Code geht hier -->
 
 <?php

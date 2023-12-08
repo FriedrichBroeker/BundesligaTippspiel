@@ -15,6 +15,10 @@
     </head>
     <body>
         
+        <div id="logo-container" style="display:none">
+            <img src="logo.png" alt="Logo">
+        </div>
+
         <div id="form">
             <h1>Bundesliga-Tippspiel</h1>
             <form name="form" action="login.php" onsubmit="return isvalid()" method="POST">
