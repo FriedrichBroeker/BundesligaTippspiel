@@ -29,7 +29,7 @@
         else{  
             echo  '<script>
                         window.location.href = "index.php";
-                        alert("Login failed. Invalid username or password!!")
+                        alert("Login Fehlgeschlagen. Falscher Benutzername oder Passwort!!")
                     </script>';
         }     
     }

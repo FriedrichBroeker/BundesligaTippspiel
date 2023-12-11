@@ -264,6 +264,7 @@ tr:hover {
     padding: 50px;
     box-shadow: 10px 10px 5px rgb(70, 1, 1);
     border-radius: 6px;
+    font-family: 'Rubik', sans-serif;
 }
 #btn{
     font-family: 'Rubik', sans-serif;
@@ -307,5 +308,10 @@ tr:hover {
 #logo-container img {
     max-width: 100px; /* oder die gewünschte Breite */
     height: auto; /* behält das Seitenverhältnis bei */
+}
+
+#scoreChart {
+    width: 100px !important;
+    height: 100px !important;
 }
 

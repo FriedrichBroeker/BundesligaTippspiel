@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="style.css"> <!-- Verwendet denselben Stil wie deine Hauptseite -->
 </head>
 <body>
+
+    <div id="logo-container" style="display:none">
+        <img src="logo.png" alt="Logo">
+    </div>
+
     <h1>Bundesliga Spiele Tippen</h1>
     <div id="matches-container">
         <!-- Spiele werden hier per JavaScript eingefügt -->

@@ -7,7 +7,6 @@
     <head>
         <title>Login</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Fjalla+One&family=Josefin+Sans:wght@700&family=Kanit:wght@700&family=Kdam+Thmor+Pro&family=Roboto:ital,wght@1,900&family=Rubik:wght@500&family=Vina+Sans&display=swap" rel="stylesheet">
@@ -15,11 +14,10 @@
     </head>
     <body>
         
-        <div id="logo-container" style="display:none">
-            <img src="logo.png" alt="Logo">
-        </div>
+         <img src="https://www.designtagebuch.de/wp-content/uploads/mediathek//2017/12/bundesliga-logo.png" alt="Bundesliga Logo" class="bundesliga-logo">
 
         <div id="form">
+     
             <h1>Bundesliga-Tippspiel</h1>
             <form name="form" action="login.php" onsubmit="return isvalid()" method="POST">
                 <label>Username: </label>
@@ -34,15 +32,15 @@
                 var user = document.form.user.value;
                 var pass = document.form.pass.value;
                 if(user.length=="" && pass.length==""){
-                    alert(" Username and password field is empty!!!");
+                    alert("Benutzername und Passwortfeld muss ausgefüllt werden!!!");
                     return false;
                 }
                 else if(user.length==""){
-                    alert(" Username field is empty!!!");
+                    alert("Benutzername-Feld musss ausgefüllt sein!!!");
                     return false;
                 }
                 else if(pass.length==""){
-                    alert(" Password field is empty!!!");
+                    alert("Passwort-Feld muss ausgefüllt sein!!!");
                     return false;
                 }
                 
