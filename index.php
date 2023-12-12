@@ -20,10 +20,15 @@
     </div>
 
     <div class="header-container">
-        <a href="index2.php" id="top-right-button">Tippe jetzt!</a>
         <img src="https://www.designtagebuch.de/wp-content/uploads/mediathek//2017/12/bundesliga-logo.png" alt="Bundesliga Logo" class="bundesliga-logo">
         <h1>Aktuelle Bundesliga Tabelle</h1>
     </div>
+
+    <div>
+        <a href="index2.php" id="top-right-button">Tippe jetzt das aktuelle Top-Spiel!</a>
+    </div>
+
+
     <div id="table-container">
         
     </div>

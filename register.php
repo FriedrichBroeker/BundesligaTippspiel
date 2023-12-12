@@ -22,7 +22,7 @@ include("connection.php");
         </a>
 
         <div id="form">
-            <h1>Registrierung für das Bundesliga-Tippspiel</h1>
+            <h1>Registrierung für das Tippspiel</h1>
             <form name="registerForm" action="signup.php" method="POST">
             <label>Username: </label>
             <input type="text" id="user" name="user" required><br><br>
