@@ -310,8 +310,5 @@ tr:hover {
     height: auto; /* behält das Seitenverhältnis bei */
 }
 
-#scoreChart {
-    width: 100px !important;
-    height: 100px !important;
-}
+
 
