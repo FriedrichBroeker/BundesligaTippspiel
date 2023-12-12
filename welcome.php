@@ -133,14 +133,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
 
     </head>
     <body>
+
         
     
     <h2>Tipp eintragen</h2>
     <p>Samstags-Top-Spiel:</p>
     <ul>
         
-        <li>Heimteam: <?php echo $heimteam_name; ?> (ID: <?php echo $heimteam_id; ?>)</li>
-        <li>Auswärtsteam: <?php echo $auswaertsteam_name; ?> (ID: <?php echo $auswaertsteam_id; ?>)</li>
+        <li>Heimteam: <?php echo $heimteam_name; ?> </li>
+        <li>Auswärtsteam: <?php echo $auswaertsteam_name; ?> </li>
     </ul>
     
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">

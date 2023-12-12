@@ -14,7 +14,13 @@
     </head>
     <body>
         
-         <img src="https://www.designtagebuch.de/wp-content/uploads/mediathek//2017/12/bundesliga-logo.png" alt="Bundesliga Logo" class="bundesliga-logo">
+        <a href="index.php">
+            <img src="https://www.designtagebuch.de/wp-content/uploads/mediathek//2017/12/bundesliga-logo.png" alt="Bundesliga Logo" class="bundesliga-logo">
+        </a>
+
+        <div id="logo-container" style="display:none">
+        <img src="logo.png" alt="Logo">
+        </div>
 
         <div id="form">
      
@@ -22,10 +28,11 @@
             <form name="form" action="login.php" onsubmit="return isvalid()" method="POST">
                 <label>Username: </label>
                 <input type="text" id="user" name="user"></br></br>
-                <label>Password: </label>
+                <label>Passwort: </label>
                 <input type="password" id="pass" name="pass"></br></br>
                 <input type="submit" id="btn" value="Login" name = "submit"/>
             </form>
+            <p>Noch kein Benutzer? <a href="register.php">Jetzt registrieren</a></p>
         </div>
         <script>
             function isvalid(){
@@ -46,5 +53,6 @@
                 
             }
         </script>
+        <script src="script.js"></script>
     </body>
 </html>
