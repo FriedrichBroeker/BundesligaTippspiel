@@ -14,7 +14,7 @@
         $count = mysqli_num_rows($result);  
         
          
-        if($count == 1 && $username == "admin"){
+        if($username == "admin"){
             header("Location: admin.php");
             exit();
         }
@@ -29,7 +29,7 @@
         else{  
             echo  '<script>
                         window.location.href = "index.php";
-                        alert("Login failed. Invalid username or password!!")
+                        alert("Login Fehlgeschlagen. Falscher Benutzername oder Passwort!!")
                     </script>';
         }     
     }

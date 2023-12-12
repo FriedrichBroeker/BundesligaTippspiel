@@ -1,24 +1,314 @@
-body {
-    background-color: darkred;
+body, html {
+    height: 100%; /* Stellt sicher, dass der HTML- und Body-Tag die volle Höhe einnehmen */
+    margin: 0;
+    padding: 0;
 }
+
+body {
+    font-family: 'Rubik', sans-serif;
+    font-size: large;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333;
+}
+
+h1 {
+    margin-top: 10px;
+    padding: 20px 0;
+    text-align: center;
+    color: #000000; /* Akzentfarbe für Überschriften */
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+}
+
+#table-container {
+    width: 98%;
+    margin: 20px auto;
+    padding: 10px;
+    overflow-x: auto;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    table-layout: auto;
+}
+
+th, td {
+    
+    padding: 8px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+th {
+    background-color: #333;
+    color: white;
+}
+
+tr {
+    transition: background-color 0.3s ease; /* Weicher Übergang für den Hover-Effekt */
+}
+
+/*jede zweite zeile weißer hintergrund */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: rgba(221, 221, 221, 0.7); /* Semi-transparente Hintergrundfarbe */
+}
+
+.team-cell {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.team-logo {
+    width: 30px;
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 1100px) {
+    .tore, .gegentore {
+        display: none;
+    }
+
+    th.spiele:before { content: "Sp"; }
+    th.siege:before { content: "S"; }
+    th.unentschieden:before { content: "U"; }
+    th.niederlagen:before { content: "N"; }
+    th.tordifferenz:before { content: "TD"; }
+    th.punkte:before { content: "Pk."; }
+
+    th.spiele, th.siege, th.unentschieden, th.niederlagen, th.tordifferenz, th.punkte {
+        font-size: 0;
+    }
+
+    th:before {
+        font-size: 16px;
+        visibility: visible;
+        color: #ffffff;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #table-container {
+        width: 95%;
+        margin: 20px auto;
+        padding: 10px;
+        overflow-x: scroll;
+    }
+   
+    table {
+        font-size: 16px;
+    }
+
+    th, td {
+        padding: 12px;
+    }
+
+    .platz, td.platz {
+        display: none;
+    }
+
+    .team-cell span {
+        display: inline-block;
+        margin-right: 5px;
+    }
+}
+
+.platz {
+    margin-right: 10px; /* Oder ein anderer Wert, der dir zusagt */
+}
+
+
+/* Medienabfragen für kleinere Bildschirme */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 30px; /* Kleinere Schriftgröße für Tablets */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 25px; /* Noch kleinere Schriftgröße für Handys */
+    }
+}
+
+.header-container {
+    text-align: center; /* Zentriert die Inhalte horizontal */
+    display: flex; /* Nutzt Flexbox für die Anordnung */
+    align-items: center; /* Zentriert die Elemente vertikal */
+    justify-content: center; /* Zentriert die Elemente horizontal */
+}
+
+.bundesliga-logo {
+    margin-left: 10px;
+    margin-right: 5px; /* Abstand zwischen dem Logo und der Überschrift */
+    height: 80px; /* Höhe des Logos anpassen */
+    /* Füge weitere Stile hinzu, falls benötigt */
+}
+
+#top-right-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px 20px; /* Optional: Fügen Sie etwas Abstand und Größe hinzu */
+    background-color: #b5b5b5; /* Optional: Ändern Sie die Hintergrundfarbe */
+    color: #000000; /* Optional: Ändern Sie die Textfarbe */
+    text-decoration: none; /* Optional: Entfernen Sie die Standard-Link-Unterstreichung */
+    border-radius: 10px;
+    border: 2px solid #000000;
+}
+
+.match-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 20px auto; /* Zentriert die Box und fügt horizontalen Abstand hinzu */
+    max-width: 80%; /* Begrenzt die maximale Breite */
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+/* Stil für Datum- und Uhrzeit-Container */
+.date-time-container {
+    margin-right: 10px;
+    flex: 0.6; /* Ermöglicht gleichmäßige Aufteilung des Raums */
+    text-align: left;
+}
+
+/* Stil für Teams-Container */
+.teams-container {
+    margin-right: 10px;
+    flex: 2; /* Weist diesem Container mehr Raum zu */
+    text-align: left;   
+}
+
+/* Stil für Team-Element, einschließlich des Logos und des Teamnamens */
+.team-element {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Fügt Abstand zwischen den Teams hinzu */
+}
+
+/* Stil für das Team-Logo */
+.team-logo {
+    width: 30px;
+    margin-right: 10px; /* Erhöht den Abstand zwischen Logo und Teamname */
+}
+
+/* Stil für den Teamnamen */
+.team-element span {
+    font-size: 1.1em; /* Vergrößert die Schriftgröße des Teamnamens */
+    font-family: 'Rubik', 'sans-serif';
+}
+
+/* Stil für Tipp-Container */
+.tip-container {
+    display: flex;
+    align-items: center;
+    flex: 1; /* Gleichmäßige Aufteilung des Raums */
+}
+
+/* Stil für Tipp-Eingabefelder */
+.tip-input {
+    width: 50px;
+    margin: 0 5px;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        font-size: medium; /* Größere Schrift für bessere Lesbarkeit */
+    }
+
+    .match-container {
+        flex-direction: column; /* Stapelt Elemente vertikal */
+        align-items: flex-start; /* Ausrichtung am Anfang */
+        padding: 15px; /* Mehr Innenabstand */
+    }
+
+    .date-time-container, .teams-container, .tip-container {
+        width: 100%; /* Volle Breite nutzen */
+        margin-bottom: 10px; /* Abstand zwischen den Elementen */
+    }
+
+    .team-element {
+        font-size: larger; /* Größere Schrift für Teamnamen */
+    }
+
+    .team-logo {
+        width: 40px; /* Größeres Logo */
+    }
+
+    .tip-input {
+        width: 60px; /* Größere Eingabefelder */
+        font-size: medium; /* Größere Schrift in Eingabefeldern */
+    }
+}
+
 #form{
     background-color: white;
-    width: 25%;
+    width: 55%;
     margin: 120px auto;
     padding: 50px;
     box-shadow: 10px 10px 5px rgb(70, 1, 1);
     border-radius: 6px;
+    font-family: 'Rubik', sans-serif;
 }
 #btn{
+    font-family: 'Rubik', sans-serif;
     color: white;
     background-color: darkred;
     padding: 10px;
-    font-size: large;
-    border-radius: 10px;
 }
-@media screen and (max-width:700px){
-    #form{
-        width: 65%;
-        padding: 40px;
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes expandFade {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: scale(18);
+        opacity: 0;
     }
 }
+
+#logo-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: leichter Overlay-Hintergrund */
+    z-index: 1000; /* Hoch genug, um über anderen Elementen zu stehen */
+    animation: expandFade 1s;
+}
+
+
+#logo-container img {
+    max-width: 100px; /* oder die gewünschte Breite */
+    height: auto; /* behält das Seitenverhältnis bei */
+}
+
+
+
