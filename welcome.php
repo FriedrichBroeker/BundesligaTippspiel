@@ -37,28 +37,25 @@
    include("showGame.php");
 
 //Anzeigen des Punktestands
-    $query = "SELECT username, punktzahl FROM login";
+    $query = "SELECT username, punktzahl FROM login ORDER BY punktzahl DESC LIMIT 6";
     $result = mysqli_query($conn, $query);
-    if($result){
-        echo "<h4>Punktestand:</h4>";
+    if ($result) {
+        echo "<h4>Top 5 Punktestand:</h4>";
         echo "<table border='3' id='table-container'>";
         echo "<tr><th>Name</th><th>Punkte</th></tr>";
 
         while ($row = mysqli_fetch_assoc($result)) {
-            if($row['username']=="admin"){
-
+            if ($row['username'] != "admin") {
+                echo "<tr>";
+                echo "<td>" . $row['username'] . "</td>";
+                echo "<td>" . $row['punktzahl'] . "</td>";
+                echo "</tr>";
             }
-            else{
-            echo "<tr>";
-            echo "<td>" . $row['username'] . "</td>";
-            echo "<td>" . $row['punktzahl'] . "</td>";
-            echo "</tr>";
         }
-    }
         echo "</table>";
-
-
     }
+
+
 
 
 //---------------------------------------------------------------------------------------Eintragen des Tipps---------------------------------------------------------------------------
