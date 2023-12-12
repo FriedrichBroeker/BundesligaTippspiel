@@ -14,7 +14,7 @@
         $count = mysqli_num_rows($result);  
         
          
-        if($count == 1 && $username == "admin"){
+        if($username == "admin"){
             header("Location: admin.php");
             exit();
         }

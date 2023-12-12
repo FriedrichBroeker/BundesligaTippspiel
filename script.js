@@ -106,6 +106,8 @@ document.querySelectorAll('a').forEach(link => {
         // Zeigt das Logo an
         document.getElementById('logo-container').style.display = 'flex';
 
+        
+
         // Verzögert die Weiterleitung
         setTimeout(function() {
             window.location = newUrl;
