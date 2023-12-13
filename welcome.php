@@ -46,8 +46,8 @@
     $query = "SELECT username, punktzahl FROM login ORDER BY punktzahl DESC LIMIT 6";
     $result = mysqli_query($conn, $query);
     if ($result) {
-        echo "<h4 style='margin-left: 20px; text-decoration: underline;'>Top 5 Punktestand:</h4>";
-        echo "<table border='3' id='table-container'>";
+        echo "<h4 style='margin-left: 185px; text-decoration: underline;'>Top 5 Punktestand:</h4>";
+        echo "<table border='3' id='table-container2'>";
         echo "<tr><th>Name</th><th>Punkte</th></tr>";
 
         while ($row = mysqli_fetch_assoc($result)) {
@@ -158,7 +158,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
 
             <input type="submit" name="submit" value="Tipp eintragen">
             </form>
-        
+
+            <script>document.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault(); // Verhindert die sofortige Weiterleitung
+                const newUrl = this.href;
+
+                // Zeigt das Logo an
+                document.getElementById('logo-container').style.display = 'flex';
+
+                
+
+                // Verzögert die Weiterleitung
+                setTimeout(function() {
+                    window.location = newUrl;
+                }, 1000); // Dauer der Animation
+                    });
+                });
+            </script>
+
         </body>
     </html>
 
