@@ -1,0 +1,308 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    font-size: large;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text for dark mode */
+}
+
+h1 {
+    margin-top: 10px;
+    padding: 20px 0;
+    text-align: center;
+    color: #e6e6e6; /* Light color for headings */
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+}
+
+#table-container {
+    width: 98%;
+    margin: 20px auto;
+    padding: 10px;
+    overflow-x: auto;
+    background-color: #1e1e1e; /* Darker background for tables */
+    box-shadow: 0 2px 4px rgba(255,255,255,0.1);
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    table-layout: auto;
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+    white-space: nowrap;
+    color: #ddd; /* Light text color */
+}
+
+th {
+    background-color: #333;
+    color: white;
+}
+
+tr {
+    transition: background-color 0.3s ease;
+}
+
+tr:nth-child(even) {
+    background-color: #2a2a2a; /* Darker for even rows */
+}
+
+tr:hover {
+    background-color: rgba(44, 44, 44, 0.7);
+}
+
+.team-cell {
+    text-align: left;
+    
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.team-logo {
+    width: 30px;
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 1100px) {
+    .tore, .gegentore {
+        display: none;
+    }
+
+    th.spiele:before { content: "Sp"; }
+    th.siege:before { content: "S"; }
+    th.unentschieden:before { content: "U"; }
+    th.niederlagen:before { content: "N"; }
+    th.tordifferenz:before { content: "TD"; }
+    th.punkte:before { content: "Pk."; }
+
+    th.spiele, th.siege, th.unentschieden, th.niederlagen, th.tordifferenz, th.punkte {
+        font-size: 0;
+    }
+
+    th:before {
+        font-size: 16px;
+        visibility: visible;
+        color: #ffffff;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #table-container {
+        width: 95%;
+        margin: 20px auto;
+        padding: 10px;
+        overflow-x: scroll;
+    }
+   
+    table {
+        font-size: 16px;
+    }
+
+    th, td {
+        padding: 12px;
+    }
+
+    .platz, td.platz {
+        display: none;
+    }
+
+    .team-cell span {
+        display: inline-block;
+        margin-right: 5px;
+    }
+}
+
+.platz {
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 25px;
+    }
+}
+
+.header-container {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bundesliga-logo {
+    margin-left: -30px;
+    margin-right: 30px;
+    height: 80px;
+    background: none; /* Ensure no background is applied */
+    border: none; /* No border */
+    box-shadow: none; /* No shadow */
+}
+
+#top-right-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    border: 2px solid #000000;
+}
+
+.match-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 20px auto;
+    max-width: 80%;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #242424; /* Dark background for match container */
+}
+
+.date-time-container {
+    margin-right: 10px;
+    flex: 0.6;
+    text-align: left;
+    color: #ccc; /* Lighter text color */
+}
+
+.teams-container {
+    margin-right: 10px;
+    flex: 2;
+    text-align: left;   
+}
+
+.team-element {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.team-logo {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.team-element span {
+    font-size: 1.1em;
+    font-family: 'Rubik', 'sans-serif';
+    color: #ddd; /* Lighter text color */
+}
+
+.tip-container {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.tip-input {
+    width: 50px;
+    margin: 0 5px;
+    background-color: #333; /* Dark input background */
+    color: #fff; /* Light text */
+    border: 1px solid #555; /* Darker border */
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        font-size: medium;
+    }
+
+    .match-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .date-time-container, .teams-container, .tip-container {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .team-element {
+        font-size: larger;
+    }
+
+    .team-logo {
+        width: 40px;
+    }
+
+    .tip-input {
+        width: 60px;
+        font-size: medium;
+    }
+}
+
+#form {
+    background-color: #262626; /* Dark form background */
+    color: #e0e0e0; /* Light text color */
+    width: 55%;
+    margin: 120px auto;
+    padding: 50px;
+    box-shadow: 10px 10px 5px rgb(70, 70, 70);
+    border-radius: 6px;
+    font-family: 'Rubik', sans-serif;
+}
+#btn {
+    font-family: 'Rubik', sans-serif;
+    color: white;
+    background-color: darkred;
+    padding: 10px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes expandFade {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: scale(18);
+        opacity: 0;
+    }
+}
+
+#logo-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: 1000;
+    animation: expandFade 1s;
+}
+
+#logo-container img {
+    max-width: 100px;
+    height: auto;
+}
