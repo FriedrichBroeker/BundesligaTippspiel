@@ -137,79 +137,79 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submitErgebnisse'])) {
 
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Spiel eintragen</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Fjalla+One&family=Josefin+Sans:wght@700&family=Kanit:wght@700&family=Kdam+Thmor+Pro&family=Roboto:ital,wght@1,900&family=Rubik:wght@500&family=Vina+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <head>
+        <title>Spiel eintragen</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Fjalla+One&family=Josefin+Sans:wght@700&family=Kanit:wght@700&family=Kdam+Thmor+Pro&family=Roboto:ital,wght@1,900&family=Rubik:wght@500&family=Vina+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
 
-<h2>Spiel eintragen</h2>
+        <h2>Spiel eintragen</h2>
 
 
-<?php
-    if (isset($confirmationMessage)) {
-        echo $confirmationMessage;
-    }
-
-    if (isset($errorMsg)) {
-        echo $errorMsg;
-    }
-?>
-
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-    <label for="heimteam">Heimteam:</label>
-    <select name="heimteam" required>
         <?php
-        // Abfrage für alle Mannschaften aus der Datenbank
-        $query_mannschaften = "SELECT * FROM mannschaften";
-        $result_mannschaften = mysqli_query($conn, $query_mannschaften);
-
-        // Überprüfe, ob die Abfrage erfolgreich war
-        if ($result_mannschaften) {
-            // Fülle das Dropdown-Menü mit den Mannschaftsnamen
-            while ($row_mannschaft = mysqli_fetch_assoc($result_mannschaften)) {
-                echo "<option value='" . $row_mannschaft['mannschaftsid'] . "'>" . $row_mannschaft['mannschaftsname'] . "</option>";
+            if (isset($confirmationMessage)) {
+                echo $confirmationMessage;
             }
-        } else {
-            echo "Fehler beim Abrufen der Mannschaften: " . mysqli_error($conn);
-        }
-        ?>
-    </select>
 
-    <label for="auswaertsteam">Auswärtsteam:</label>
-    <select name="auswaertsteam" required>
-        <?php
-        // Wiederhole den gleichen Prozess für das Auswärtsteam
-        if ($result_mannschaften) {
-            mysqli_data_seek($result_mannschaften, 0); // Setze den Zeiger zurück
-            while ($row_mannschaft = mysqli_fetch_assoc($result_mannschaften)) {
-                echo "<option value='" . $row_mannschaft['mannschaftsid'] . "'>" . $row_mannschaft['mannschaftsname'] . "</option>";
+            if (isset($errorMsg)) {
+                echo $errorMsg;
             }
-        }
         ?>
-    </select>
 
-    <input type="submit" name="submit" value="Spiel eintragen">
-    
-    <br> <br>
+        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+            <label for="heimteam">Heimteam:</label>
+            <select name="heimteam" required>
+                <?php
+                // Abfrage für alle Mannschaften aus der Datenbank
+                $query_mannschaften = "SELECT * FROM mannschaften";
+                $result_mannschaften = mysqli_query($conn, $query_mannschaften);
 
-    <label for="ergebnis_heimteam">Tore: <?php echo $heimteam_name?></label>
-    <input type="number" name="ergebnis_heimteam" min="0" max="12">
+                // Überprüfe, ob die Abfrage erfolgreich war
+                if ($result_mannschaften) {
+                    // Fülle das Dropdown-Menü mit den Mannschaftsnamen
+                    while ($row_mannschaft = mysqli_fetch_assoc($result_mannschaften)) {
+                        echo "<option value='" . $row_mannschaft['mannschaftsid'] . "'>" . $row_mannschaft['mannschaftsname'] . "</option>";
+                    }
+                } else {
+                    echo "Fehler beim Abrufen der Mannschaften: " . mysqli_error($conn);
+                }
+                ?>
+            </select>
 
-    <label for="ergebnis_auswaertsteam">Tore: <?php echo $auswaertsteam_name?></label>
-    <input type="number" name="ergebnis_auswaertsteam" min="0" max="12">
+            <label for="auswaertsteam">Auswärtsteam:</label>
+            <select name="auswaertsteam" required>
+                <?php
+                // Wiederhole den gleichen Prozess für das Auswärtsteam
+                if ($result_mannschaften) {
+                    mysqli_data_seek($result_mannschaften, 0); // Setze den Zeiger zurück
+                    while ($row_mannschaft = mysqli_fetch_assoc($result_mannschaften)) {
+                        echo "<option value='" . $row_mannschaft['mannschaftsid'] . "'>" . $row_mannschaft['mannschaftsname'] . "</option>";
+                    }
+                }
+                ?>
+            </select>
 
-    <input type="submit" name="submitErgebnisse" value="Ergebnis eintragen">
+            <input type="submit" name="submit" value="Spiel eintragen">
+            
+            <br> <br>
+
+            <label for="ergebnis_heimteam">Tore: <?php echo $heimteam_name?></label>
+            <input type="number" name="ergebnis_heimteam" min="0" max="12">
+
+            <label for="ergebnis_auswaertsteam">Tore: <?php echo $auswaertsteam_name?></label>
+            <input type="number" name="ergebnis_auswaertsteam" min="0" max="12">
+
+            <input type="submit" name="submitErgebnisse" value="Ergebnis eintragen">
 
 
 
 
 
-</form>
-</body>
+        </form>
+    </body>
 </html>
 <?php
      // Beende die Pufferung und sende den Pufferinhalt an den Browser

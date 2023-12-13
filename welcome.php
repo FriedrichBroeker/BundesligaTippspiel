@@ -22,11 +22,17 @@
     // Container, der Bild und Willkommensnachricht umfasst
     echo "<div class='header-container'>";
 
-    // Fügen Sie hier das Bild ein
-    echo "<img src='https://www.designtagebuch.de/wp-content/uploads/mediathek//2017/12/bundesliga-logo.png' alt='Bundesliga Logo' class='bundesliga-logo' style='vertical-align: middle;'>";
+    // Fügen Sie hier das Bundesliga-Bild ein
+    echo '<a href="index2.php">
+        <img src="https://www.designtagebuch.de/wp-content/uploads/mediathek//2017/12/bundesliga-logo.png" alt="Bundesliga Logo" class="bundesliga-logo">
+    </a>
+
+    <div id="logo-container" style="display:none">
+        <img src="logo.png" alt="Logo">
+    </div>';
 
     // Willkommensnachricht
-    echo "<h1 style='display: inline; margin-left: 20px;'>Willkommen, $LoggedInUser!</h1>";
+    echo "<h1 style='display: inline; margin-left: 20px;'>Willkommen $LoggedInUser !</h1>";
 
     echo "</div>";
 
@@ -40,7 +46,7 @@
     $query = "SELECT username, punktzahl FROM login ORDER BY punktzahl DESC LIMIT 6";
     $result = mysqli_query($conn, $query);
     if ($result) {
-        echo "<h4>Top 5 Punktestand:</h4>";
+        echo "<h4 style='margin-left: 20px; text-decoration: underline;'>Top 5 Punktestand:</h4>";
         echo "<table border='3' id='table-container'>";
         echo "<tr><th>Name</th><th>Punkte</th></tr>";
 
@@ -120,40 +126,40 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
     
     <!DOCTYPE html>
     <html>
-    <head>
-        <title>Tipp eintragen</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Fjalla+One&family=Josefin+Sans:wght@700&family=Kanit:wght@700&family=Kdam+Thmor+Pro&family=Roboto:ital,wght@1,900&family=Rubik:wght@500&family=Vina+Sans&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <head>
+            <title>Tipp eintragen</title>
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Fjalla+One&family=Josefin+Sans:wght@700&family=Kanit:wght@700&family=Kdam+Thmor+Pro&family=Roboto:ital,wght@1,900&family=Rubik:wght@500&family=Vina+Sans&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="style.css">
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    </head>
-    <body>
+        </head>
+        <body>
+
 
         
-    
-    <h2>Tipp eintragen</h2>
-    <p>Samstags-Top-Spiel:</p>
-    <ul>
+            <h2 id="headline-Tipp">Jetzt tippen</h2>
+            <p>Top-Spiel am Wochenende:</p>
+            <ul>
+                
+                <li>Heimteam: <?php echo $heimteam_name; ?> </li>
+                <li>Auswärtsteam: <?php echo $auswaertsteam_name; ?> </li>
+            </ul>
+            
+            <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+            <input type="hidden" name="loggedInUser" value="<?php echo $LoggedInUser; ?>">
+            <input type="hidden" name="spielid" value="<?php echo $latest_game_id; ?>">
+            <label for="getippte_tore_heimteam">Tore: <?php echo $heimteam_name?></label>
+            <input type="text" name="getippte_tore_heimteam" required>
+
+            <label for="getippte_tore_auswaertsteam">Tore: <?php echo $auswaertsteam_name?></label>
+            <input type="text" name="getippte_tore_auswaertsteam" required>
+
+            <input type="submit" name="submit" value="Tipp eintragen">
+            </form>
         
-        <li>Heimteam: <?php echo $heimteam_name; ?> </li>
-        <li>Auswärtsteam: <?php echo $auswaertsteam_name; ?> </li>
-    </ul>
-    
-    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-    <input type="hidden" name="loggedInUser" value="<?php echo $LoggedInUser; ?>">
-    <input type="hidden" name="spielid" value="<?php echo $latest_game_id; ?>">
-    <label for="getippte_tore_heimteam">Tore: <?php echo $heimteam_name?></label>
-    <input type="text" name="getippte_tore_heimteam" required>
-
-    <label for="getippte_tore_auswaertsteam">Tore: <?php echo $auswaertsteam_name?></label>
-    <input type="text" name="getippte_tore_auswaertsteam" required>
-
-    <input type="submit" name="submit" value="Tipp eintragen">
-</form>
-    
-    </body>
+        </body>
     </html>
 
 
