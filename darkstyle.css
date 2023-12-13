@@ -1,16 +1,16 @@
 body, html {
-    height: 100%;
+    height: 100%; 
     margin: 0;
     padding: 0;
 }
 
 body {
-    font-family: 'Rubik', sans-serif;
+    font-family: "Rubik", sans-serif;
     font-size: large;
     margin: 0;
     padding: 0;
     background-color: #121212; /* Dark background */
-    color: #e0e0e0; /* Light text for dark mode */
+    color: #e0e0e0; /* Light text color */
 }
 
 h1 {
@@ -18,17 +18,24 @@ h1 {
     padding: 20px 0;
     text-align: center;
     color: #e6e6e6; /* Light color for headings */
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 40px;
+}
+
+/* === Tabellen-Startseite (index.php) === */
+
+#logo-img {
+    margin-top: 40px;
 }
 
 #table-container {
     width: 98%;
-    margin: 20px auto;
+    margin-left: 10px;
+    margin-right: 20px;
     padding: 10px;
     overflow-x: auto;
     background-color: #1e1e1e; /* Darker background for tables */
-    box-shadow: 0 2px 4px rgba(255,255,255,0.1);
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
     border-radius: 8px;
 }
 
@@ -65,7 +72,6 @@ tr:hover {
 
 .team-cell {
     text-align: left;
-    
     align-items: center;
     justify-content: flex-start;
 }
@@ -105,7 +111,7 @@ tr:hover {
         padding: 10px;
         overflow-x: scroll;
     }
-   
+
     table {
         font-size: 16px;
     }
@@ -151,9 +157,9 @@ tr:hover {
     margin-left: -30px;
     margin-right: 30px;
     height: 80px;
-    background: none; /* Ensure no background is applied */
-    border: none; /* No border */
-    box-shadow: none; /* No shadow */
+    background: none;
+    border: none;
+    box-shadow: none;
 }
 
 #top-right-button {
@@ -161,8 +167,8 @@ tr:hover {
     top: 10px;
     right: 10px;
     padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
+    background-color: #333; /* Darker background */
+    color: #fff; /* Light text color */
     text-decoration: none;
     border-radius: 10px;
     border: 2px solid #000000;
@@ -191,7 +197,7 @@ tr:hover {
 .teams-container {
     margin-right: 10px;
     flex: 2;
-    text-align: left;   
+    text-align: left;
 }
 
 .team-element {
@@ -207,7 +213,7 @@ tr:hover {
 
 .team-element span {
     font-size: 1.1em;
-    font-family: 'Rubik', 'sans-serif';
+    font-family: "Rubik", "sans-serif";
     color: #ddd; /* Lighter text color */
 }
 
@@ -255,21 +261,42 @@ tr:hover {
     }
 }
 
+/* === Tippspiel-Anmeldung (index2.php) === */
+
 #form {
-    background-color: #262626; /* Dark form background */
+    background-color: #262626; /* Dark background for form */
     color: #e0e0e0; /* Light text color */
     width: 55%;
-    margin: 120px auto;
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 257px;
     padding: 50px;
     box-shadow: 10px 10px 5px rgb(70, 70, 70);
     border-radius: 6px;
-    font-family: 'Rubik', sans-serif;
+    font-family: "Rubik", sans-serif;
+    text-align: center;
 }
+
+#pw-style {
+    margin-right: 7px;
+}
+
+.nb-email-input {
+    width: 30%;
+    height: 35px;
+    border: var(--border-style) var(--weiss);
+    padding: 0.4rem;
+}
+
 #btn {
-    font-family: 'Rubik', sans-serif;
+    font-family: "Rubik", sans-serif;
     color: white;
-    background-color: darkred;
+    background-color: #cf2f2f;
     padding: 10px;
+    margin-top: 7px;
+    margin-bottom: 10px;
+    transition-duration: 0.5s;
 }
 
 @keyframes fadeIn {
@@ -297,7 +324,7 @@ tr:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 1000;
     animation: expandFade 1s;
 }
@@ -310,9 +337,55 @@ tr:hover {
 #small-logo {
     margin-left: 25px;
     margin-top: 20px;
-    height: 80px; /* Höhe des Logos anpassen */
-    /* Füge weitere Stile hinzu, falls benötigt */
-    background: none; /* Ensure no background is applied */
-    border: none; /* No border */
-    box-shadow: none; /* No shadow */
+    height: 80px;
+    background: none;
+    border: none;
+    box-shadow: none;
 }
+
+#table-container2 {
+    width: 78%;
+    margin: 20px auto;
+    padding: 10px;
+    overflow-x: auto;
+    background-color: #1e1e1e;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+#headline-Tipp {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.tabelle-box2 {
+    text-align: center;
+    background-color: #2a2a2a;
+    padding-top: 20px;
+    padding-bottom: 35px;
+    margin-bottom: 10px;
+}
+
+/* === FOOTER === */
+
+#footer {
+    font-size: medium;
+    margin-top: 75px;
+    background-color: #656565;
+    height: 3.3rem;
+    color: #fff;
+  }
+  
+  #footer-nav {
+    display: block;
+    float: right;
+  }
+  
+  .footer-box {
+    padding: 0.7rem;
+  }
+  
+  #footer-style {
+    margin-top: 50px;
+  }
+  
