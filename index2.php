@@ -10,17 +10,18 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Fjalla+One&family=Josefin+Sans:wght@700&family=Kanit:wght@700&family=Kdam+Thmor+Pro&family=Roboto:ital,wght@1,900&family=Rubik:wght@500&family=Vina+Sans&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" type="text/css" href="style.css" id="theme-link">
     </head>
     <body>
         
         <a href="index.php">
-            <img src="https://www.designtagebuch.de/wp-content/uploads/mediathek//2017/12/bundesliga-logo.png" alt="Bundesliga Logo" class="bundesliga-logo">
+            <img src="logo.png" alt="Bundesliga Logo" class="bundesliga-logo" id="small-logo">
         </a>
 
         <div id="logo-container" style="display:none">
         <img src="logo.png" alt="Logo">
         </div>
+        <button id="theme-toggle">Toggle Dark Mode</button>
 
         <div id="form">
      
@@ -54,5 +55,9 @@
             }
         </script>
         <script src="script.js"></script>
+        <script src="theme-toggle.js"></script>
+
     </body>
 </html>
+
+?>
