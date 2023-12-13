@@ -1,3 +1,5 @@
+/* === GENERELLES === */
+
 body,
 html {
   height: 100%; /* Stellt sicher, dass der HTML- und Body-Tag die volle Höhe einnehmen */
@@ -22,6 +24,8 @@ h1 {
   font-family: "Roboto", sans-serif;
   font-size: 40px;
 }
+
+/* === Tabellen-Startseite (index.php) === */
 
 #table-container {
   width: 98%;
@@ -201,6 +205,8 @@ tr:hover {
   color: #fff;
 }
 
+/* === tippen.php === */
+
 .match-container {
   display: flex;
   align-items: center;
@@ -291,6 +297,8 @@ tr:hover {
   }
 }
 
+/* === Tippspiel-Anmeldung (index2.php) === */
+
 #form {
   background-color: #f2f2f2;
   width: 55%;
@@ -313,6 +321,8 @@ tr:hover {
   background-color: rgb(128, 7, 7);
   color: #fff;
 }
+
+/* === Bundesliga-LOGO === */
 
 @keyframes fadeIn {
   from {
@@ -356,4 +366,12 @@ tr:hover {
 #logo-container img {
   max-width: 100px; /* oder die gewünschte Breite */
   height: auto; /* behält das Seitenverhältnis bei */
+}
+
+/* === Benutzer-Seite (welcome.php) === */
+
+#headline-Tipp {
+  margin-top: 60px;
+  text-align: center;
+  text-decoration: underline;
 }

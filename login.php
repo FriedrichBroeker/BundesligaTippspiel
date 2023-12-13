@@ -28,7 +28,7 @@
         
         else{  
             echo  '<script>
-                        window.location.href = "index.php";
+                        window.location.href = "index2.php";
                         alert("Login Fehlgeschlagen. Falscher Benutzername oder Passwort!!")
                     </script>';
         }     
