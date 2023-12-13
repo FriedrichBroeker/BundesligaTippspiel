@@ -75,10 +75,9 @@ tr:hover {
 }
 
 .team-cell {
-  text-align: left;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+    text-align: left;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .team-logo {
@@ -180,10 +179,10 @@ tr:hover {
 }
 
 .bundesliga-logo {
-  margin-left: 10px;
-  margin-right: 5px; /* Abstand zwischen dem Logo und der Überschrift */
-  height: 80px; /* Höhe des Logos anpassen */
-  /* Füge weitere Stile hinzu, falls benötigt */
+    margin-left: 10px;
+    margin-right: 5px; /* Abstand zwischen dem Logo und der Überschrift */
+    height: 80px; /* Höhe des Logos anpassen */
+    /* Füge weitere Stile hinzu, falls benötigt */
 }
 
 #top-right-button {
@@ -368,20 +367,5 @@ tr:hover {
   height: auto; /* behält das Seitenverhältnis bei */
 }
 
-/* === Benutzer-Seite (welcome.php) === */
 
-#table-container2 {
-  width: 68%;
-  margin: 20px auto;
-  padding: 10px;
-  overflow-x: auto;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-}
 
-#headline-Tipp {
-  margin-top: 60px;
-  text-align: center;
-  text-decoration: underline;
-}

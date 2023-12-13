@@ -18,7 +18,7 @@ include("connection.php");
 
         <!-- Ihr Logo und Überschrift -->
         <a href="index.php">
-            <img src="https://www.designtagebuch.de/wp-content/uploads/mediathek//2017/12/bundesliga-logo.png" alt="Bundesliga Logo" class="bundesliga-logo">
+            <img src="https://www.designtagebuch.de/wp-content/uploads/mediathek//2017/12/bundesliga-logo.png" alt="Bundesliga Logo" id="small-logo">
         </a>
 
         <div id="form">
