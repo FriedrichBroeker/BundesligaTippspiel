@@ -32,7 +32,7 @@
     </div>';
 
     // Willkommensnachricht
-    echo "<h1 style='display: inline; margin-left: 20px;'>Willkommen $LoggedInUser !</h1>";
+    echo "<h1 style='display: inline; margin-top: 20px;'>Willkommen $LoggedInUser !</h1>";
 
     echo "</div>";
 
@@ -46,7 +46,8 @@
     $query = "SELECT username, punktzahl FROM login ORDER BY punktzahl DESC LIMIT 6";
     $result = mysqli_query($conn, $query);
     if ($result) {
-        echo "<h4 style='margin-left: 185px; text-decoration: underline;'>Top 5 Punktestand:</h4>";
+        echo "<div class='tabelle-box'>";
+        echo "<h4 style='  text-align: center; text-decoration: underline;'>Top 5 Punktestand:</h4>";
         echo "<table border='3' id='table-container2'>";
         echo "<tr><th>Name</th><th>Punkte</th></tr>";
 
@@ -59,6 +60,7 @@
             }
         }
         echo "</table>";
+        echo "</div>";
     }
 
 

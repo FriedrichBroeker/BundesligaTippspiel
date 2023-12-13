@@ -15,7 +15,7 @@
     <body>
         
         <a href="index.php">
-            <img src="https://www.designtagebuch.de/wp-content/uploads/mediathek//2017/12/bundesliga-logo.png" alt="Bundesliga Logo" id="small-logo">
+            <img src="https://www.designtagebuch.de/wp-content/uploads/mediathek//2017/12/bundesliga-logo.png" alt="Bundesliga Logo" class="bundesliga-logo">
         </a>
 
         <div id="logo-container" style="display:none">
