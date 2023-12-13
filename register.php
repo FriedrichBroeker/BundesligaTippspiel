@@ -16,7 +16,7 @@ include("connection.php");
 
         <!-- Ihr Logo und Überschrift -->
         <a href="index2.php">
-            <img src="https://www.designtagebuch.de/wp-content/uploads/mediathek//2017/12/bundesliga-logo.png" alt="Bundesliga Logo" class="bundesliga-logo">
+            <img src="logo.png" alt="Bundesliga Logo" class="bundesliga-logo" id="small-logo">
         </a>
         <button id="theme-toggle">Toggle Dark Mode</button>
 
@@ -29,11 +29,11 @@ include("connection.php");
             <h1>Registrierung für das Tippspiel</h1>
             <form name="registerForm" action="signup.php" method="POST">
             <label>Username: </label>
-            <input type="text" id="user" name="user" required><br><br>
-            <label>Passwort: </label>
-            <input type="password" id="pass" name="pass" required><br><br>
+            <input class="nb-email-input" type="text" id="user" name="user" required><br><br>
+            <label id="pw-style">Passwort: </label>
+            <input class="nb-email-input" type="password" id="pass" name="pass" required><br><br>
             <label>Passwort bestätigen: </label>
-            <input type="password" id="pass_confirm" name="pass_confirm" required><br><br>
+            <input class="nb-email-input" type="password" id="pass_confirm" name="pass_confirm" required><br><br>
             <input type="submit" id="btn" value="Registrieren" name="register"/>
             </form>
             <p>Schon Benutzer? <a href="index2.php">Anmelden</a></p>
@@ -62,5 +62,7 @@ include("connection.php");
                     });
                 });
             </script>
+    <script src="theme-toggle.js"></script>
+
     </body>
 </html>

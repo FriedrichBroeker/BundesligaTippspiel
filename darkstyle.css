@@ -279,12 +279,12 @@ tr:hover {
 }
 
 #pw-style {
-    margin-right: 7px;
+    margin-right: 9px;
 }
 
 .nb-email-input {
     width: 30%;
-    height: 35px;
+    height: 38px;
     border: var(--border-style) var(--weiss);
     padding: 0.4rem;
 }
