@@ -17,9 +17,13 @@ include("connection.php");
     <body>
 
         <!-- Ihr Logo und Überschrift -->
-        <a href="index.php">
-            <img src="https://www.designtagebuch.de/wp-content/uploads/mediathek//2017/12/bundesliga-logo.png" alt="Bundesliga Logo" id="small-logo">
+        <a href="index2.php">
+            <img src="https://www.designtagebuch.de/wp-content/uploads/mediathek//2017/12/bundesliga-logo.png" alt="Bundesliga Logo" class="bundesliga-logo">
         </a>
+
+        <div id="logo-container" style="display:none">
+        <img src="logo.png" alt="Logo">
+        </div>
 
         <div id="form">
             <h1>Registrierung für das Tippspiel</h1>
@@ -35,9 +39,28 @@ include("connection.php");
             <p>Schon Benutzer? <a href="index2.php">Anmelden</a></p>
         </div>
 
-        <!-- Optional: JavaScript-Validierung -->
-        <script>
-            // Sie können hier eine ähnliche Validierung wie auf der Login-Seite verwenden
-        </script>
+        <footer id="footer">
+            <div class="footer-box">
+                <span id="footer-nav">Website made by Friedrich, Kevin, Berkay </span>
+            </div>
+        </footer>
+
+        <script>document.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault(); // Verhindert die sofortige Weiterleitung
+                const newUrl = this.href;
+
+                // Zeigt das Logo an
+                document.getElementById('logo-container').style.display = 'flex';
+
+                
+
+                // Verzögert die Weiterleitung
+                setTimeout(function() {
+                    window.location = newUrl;
+                }, 1000); // Dauer der Animation
+                    });
+                });
+            </script>
     </body>
 </html>

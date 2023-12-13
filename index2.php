@@ -27,13 +27,20 @@
             <h1>Tippspiel - Anmeldung</h1>
             <form name="form" action="login.php" onsubmit="return isvalid()" method="POST">
                 <label>Username: </label>
-                <input type="text" id="user" name="user"></br></br>
-                <label>Passwort: </label>
-                <input type="password" id="pass" name="pass"></br></br>
+                <input class="nb-email-input" type="text" id="user" name="user"></br></br>
+                <label id="pw-style">Passwort: </label>
+                <input class="nb-email-input" type="password" id="pass" name="pass"></br></br>
                 <input type="submit" id="btn" value="Login" name = "submit"/>
             </form>
             <p>Noch kein Benutzer? <a href="register.php">Jetzt registrieren</a></p>
         </div>
+
+        <footer id="footer">
+            <div class="footer-box">
+                <span id="footer-nav">Website made by Friedrich, Kevin, Berkay </span>
+            </div>
+        </footer>
+
         <script>
             function isvalid(){
                 var user = document.form.user.value;

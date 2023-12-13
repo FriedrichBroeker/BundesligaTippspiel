@@ -24,7 +24,7 @@
         <div class="header-container">
             <a href="index2.php" id="top-right-button">Tippe jetzt das Top-Spiel!</a>
             <img src="logo.png" alt="Bundesliga Logo" class="bundesliga-logo" id="logo-img">
-            <h1>  Bundesliga Tabelle</h1>
+            <h1 id="logo-img">  Bundesliga Tabelle</h1>
         </div>
 
         <button id="theme-toggle">Toggle Dark Mode</button>
@@ -40,5 +40,11 @@
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+
+        <footer id="footer">
+            <div class="footer-box">
+                <span id="footer-nav">Website made by Friedrich, Kevin, Berkay </span>
+            </div>
+        </footer>
     </body>
 </html>

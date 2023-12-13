@@ -27,9 +27,14 @@ h1 {
 
 /* === Tabellen-Startseite (index.php) === */
 
+#logo-img {
+  margin-top: 40px;
+}
+
 #table-container {
   width: 98%;
-  margin: 20px auto;
+  margin-left: 10px;
+  margin-right: 20px;
   padding: 10px;
   overflow-x: auto;
   background-color: #fff;
@@ -301,18 +306,35 @@ tr:hover {
 #form {
   background-color: #f2f2f2;
   width: 55%;
-  margin: 120px auto;
+  margin-top: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 257px;
   padding: 50px;
   box-shadow: 10px 10px 5px rgb(70, 1, 1);
   border-radius: 6px;
   font-family: "Rubik", sans-serif;
   text-align: center;
 }
+
+#pw-style {
+  margin-right: 7px;
+}
+
+.nb-email-input {
+  width: 30%;
+  height: 35px;
+  border: var(--border-style) var(--weiss);
+  padding: 0.4rem;
+}
+
 #btn {
   font-family: "Rubik", sans-serif;
   color: white;
   background-color: #cf2f2f;
   padding: 10px;
+  margin-top: 7px;
+  margin-bottom: 10px;
   transition-duration: 0.5s;
 }
 
@@ -391,4 +413,35 @@ tr:hover {
 #headline-Tipp {
   margin-top: 50px;
   text-align: center;
+}
+
+.tabelle-box2 {
+  text-align: center;
+  background-color: #ddd;
+  padding-top: 20px;
+  padding-bottom: 35px;
+  margin-bottom: 10px;
+}
+
+/* === FOOTER === */
+
+#footer {
+  font-size: medium;
+  margin-top: 75px;
+  background-color: #333;
+  height: 3.3rem;
+  color: #fff;
+}
+
+#footer-nav {
+  display: block;
+  float: right;
+}
+
+.footer-box {
+  padding: 0.7rem;
+}
+
+#footer-style {
+  margin-top: 50px;
 }
