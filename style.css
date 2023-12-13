@@ -27,7 +27,7 @@ h1 {
 
 /* === Tabellen-Startseite (index.php) === */
 
-#table-container {
+#table-container1 {
   width: 98%;
   margin: 20px auto;
   padding: 10px;
@@ -369,6 +369,16 @@ tr:hover {
 }
 
 /* === Benutzer-Seite (welcome.php) === */
+
+#table-container2 {
+  width: 68%;
+  margin: 20px auto;
+  padding: 10px;
+  overflow-x: auto;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
 
 #headline-Tipp {
   margin-top: 60px;
