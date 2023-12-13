@@ -10,16 +10,20 @@ include("connection.php");
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Fjalla+One&family=Josefin+Sans:wght@700&family=Kanit:wght@700&family=Kdam+Thmor+Pro&family=Roboto:ital,wght@1,900&family=Rubik:wght@500&family=Vina+Sans&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
-    </head>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" type="text/css" href="style.css" id="theme-link">
     </head>
     <body>
 
         <!-- Ihr Logo und Überschrift -->
-        <a href="index.php">
-            <img src="https://www.designtagebuch.de/wp-content/uploads/mediathek//2017/12/bundesliga-logo.png" alt="Bundesliga Logo" id="small-logo">
+        <a href="index2.php">
+            <img src="https://www.designtagebuch.de/wp-content/uploads/mediathek//2017/12/bundesliga-logo.png" alt="Bundesliga Logo" class="bundesliga-logo">
         </a>
+        <button id="theme-toggle">Toggle Dark Mode</button>
+
+
+        <div id="logo-container" style="display:none">
+        <img src="logo.png" alt="Logo">
+        </div>
 
         <div id="form">
             <h1>Registrierung für das Tippspiel</h1>
@@ -35,9 +39,28 @@ include("connection.php");
             <p>Schon Benutzer? <a href="index2.php">Anmelden</a></p>
         </div>
 
-        <!-- Optional: JavaScript-Validierung -->
-        <script>
-            // Sie können hier eine ähnliche Validierung wie auf der Login-Seite verwenden
-        </script>
+        <footer id="footer">
+            <div class="footer-box">
+                <span id="footer-nav">Website made by Friedrich, Kevin, Berkay </span>
+            </div>
+        </footer>
+
+        <script>document.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault(); // Verhindert die sofortige Weiterleitung
+                const newUrl = this.href;
+
+                // Zeigt das Logo an
+                document.getElementById('logo-container').style.display = 'flex';
+
+                
+
+                // Verzögert die Weiterleitung
+                setTimeout(function() {
+                    window.location = newUrl;
+                }, 1000); // Dauer der Animation
+                    });
+                });
+            </script>
     </body>
 </html>

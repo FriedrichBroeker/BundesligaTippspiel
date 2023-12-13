@@ -209,6 +209,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submitErgebnisse'])) {
 
 
         </form>
+
+        <footer id="footer">
+            <div class="footer-box">
+                <span id="footer-nav">Website made by Friedrich, Kevin, Berkay </span>
+            </div>
+        </footer>
+
     </body>
 </html>
 <?php

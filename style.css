@@ -1,5 +1,3 @@
-/* === GENERELLES === */
-
 body,
 html {
   height: 100%; /* Stellt sicher, dass der HTML- und Body-Tag die volle Höhe einnehmen */
@@ -27,9 +25,14 @@ h1 {
 
 /* === Tabellen-Startseite (index.php) === */
 
+#logo-img {
+  margin-top: 40px;
+}
+
 #table-container {
   width: 98%;
-  margin: 20px auto;
+  margin-left: 10px;
+  margin-right: 20px;
   padding: 10px;
   overflow-x: auto;
   background-color: #fff;
@@ -76,6 +79,7 @@ tr:hover {
 
 .team-cell {
   text-align: left;
+
   align-items: center;
   justify-content: flex-start;
 }
@@ -179,32 +183,26 @@ tr:hover {
 }
 
 .bundesliga-logo {
-  margin-left: 10px;
+  margin-left: -30px;
   margin-right: 30px; /* Abstand zwischen dem Logo und der Überschrift */
   height: 80px; /* Höhe des Logos anpassen */
   /* Füge weitere Stile hinzu, falls benötigt */
+  background: none; /* Ensure no background is applied */
+  border: none; /* No border */
+  box-shadow: none; /* No shadow */
 }
 
 #top-right-button {
-  float: right;
-  position: absolute;
-  top: 58px;
-  right: 20px;
+  position: fixed;
+  top: 10px;
+  right: 10px;
   padding: 10px 20px; /* Optional: Fügen Sie etwas Abstand und Größe hinzu */
-  background-color: #cf2f2f; /* Optional: Ändern Sie die Hintergrundfarbe */
-  color: #f2f2f2; /* Optional: Ändern Sie die Textfarbe */
+  background-color: #b5b5b5; /* Optional: Ändern Sie die Hintergrundfarbe */
+  color: #000000; /* Optional: Ändern Sie die Textfarbe */
   text-decoration: none; /* Optional: Entfernen Sie die Standard-Link-Unterstreichung */
   border-radius: 10px;
   border: 2px solid #000000;
-  transition-duration: 0.5s;
 }
-
-#top-right-button:hover {
-  background-color: rgb(128, 7, 7);
-  color: #fff;
-}
-
-/* === tippen.php === */
 
 .match-container {
   display: flex;
@@ -301,27 +299,37 @@ tr:hover {
 #form {
   background-color: #f2f2f2;
   width: 55%;
-  margin: 120px auto;
+  margin-top: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 257px;
   padding: 50px;
   box-shadow: 10px 10px 5px rgb(70, 1, 1);
   border-radius: 6px;
   font-family: "Rubik", sans-serif;
   text-align: center;
 }
+
+#pw-style {
+  margin-right: 7px;
+}
+
+.nb-email-input {
+  width: 30%;
+  height: 35px;
+  border: var(--border-style) var(--weiss);
+  padding: 0.4rem;
+}
+
 #btn {
   font-family: "Rubik", sans-serif;
   color: white;
   background-color: #cf2f2f;
   padding: 10px;
+  margin-top: 7px;
+  margin-bottom: 10px;
   transition-duration: 0.5s;
 }
-
-#btn:hover {
-  background-color: rgb(128, 7, 7);
-  color: #fff;
-}
-
-/* === Bundesliga-LOGO === */
 
 @keyframes fadeIn {
   from {
@@ -367,15 +375,14 @@ tr:hover {
   height: auto; /* behält das Seitenverhältnis bei */
 }
 
-/* === Benutzer-Seite (welcome.php) === */
-
-.tabelle-box {
-  background-color: #ddd;
-  border-radius: 20px;
-  padding-top: 30px;
-  padding-bottom: 40px;
-  margin-right: 200px;
-  margin-left: 200px;
+#small-logo {
+  margin-left: 25px;
+  margin-top: 20px;
+  height: 80px; /* Höhe des Logos anpassen */
+  /* Füge weitere Stile hinzu, falls benötigt */
+  background: none; /* Ensure no background is applied */
+  border: none; /* No border */
+  box-shadow: none; /* No shadow */
 }
 
 #table-container2 {
@@ -391,4 +398,35 @@ tr:hover {
 #headline-Tipp {
   margin-top: 50px;
   text-align: center;
+}
+
+.tabelle-box2 {
+  text-align: center;
+  background-color: #ddd;
+  padding-top: 20px;
+  padding-bottom: 35px;
+  margin-bottom: 10px;
+}
+
+/* === FOOTER === */
+
+#footer {
+  font-size: medium;
+  margin-top: 75px;
+  background-color: #333;
+  height: 3.3rem;
+  color: #fff;
+}
+
+#footer-nav {
+  display: block;
+  float: right;
+}
+
+.footer-box {
+  padding: 0.7rem;
+}
+
+#footer-style {
+  margin-top: 50px;
 }
