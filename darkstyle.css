@@ -306,3 +306,13 @@ tr:hover {
     max-width: 100px;
     height: auto;
 }
+
+#small-logo {
+    margin-left: 25px;
+    margin-top: 20px;
+    height: 80px; /* Höhe des Logos anpassen */
+    /* Füge weitere Stile hinzu, falls benötigt */
+    background: none; /* Ensure no background is applied */
+    border: none; /* No border */
+    box-shadow: none; /* No shadow */
+}
