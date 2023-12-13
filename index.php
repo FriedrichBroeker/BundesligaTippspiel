@@ -20,19 +20,11 @@
     </div>
     
 
-<<<<<<< HEAD
         <div class="header-container">
             <a href="index2.php" id="top-right-button">Tippe jetzt das Top-Spiel!</a>
             <img src="logo.png" alt="Bundesliga Logo" class="bundesliga-logo" id="logo-img">
             <h1 id="logo-img">  Bundesliga Tabelle</h1>
         </div>
-=======
-    <div class="header-container">
-        <a href="index2.php" id="top-right-button">Tippe jetzt!</a>
-        <img src="logo.png" alt="Bundesliga Logo" class="bundesliga-logo" id="logo-img">
-        <h1>Aktuelle Bundesliga Tabelle</h1>
-    </div>
->>>>>>> f7e3aafb8b8e8f7cdc230cba01d12e5a477c5d34
 
     <button id="theme-toggle">Toggle Dark Mode</button>
     <div id="table-container">
@@ -47,7 +39,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-<<<<<<< HEAD
 
         <footer id="footer">
             <div class="footer-box">
@@ -55,7 +46,4 @@
             </div>
         </footer>
     </body>
-=======
-</body>
->>>>>>> f7e3aafb8b8e8f7cdc230cba01d12e5a477c5d34
 </html>

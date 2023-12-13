@@ -15,13 +15,8 @@ include("connection.php");
     <body>
 
         <!-- Ihr Logo und Überschrift -->
-<<<<<<< HEAD
         <a href="index2.php">
             <img src="https://www.designtagebuch.de/wp-content/uploads/mediathek//2017/12/bundesliga-logo.png" alt="Bundesliga Logo" class="bundesliga-logo">
-=======
-        <a href="index.php">
-            <img src="logo.png" alt="Bundesliga Logo" class="bundesliga-logo" id="small-logo">
->>>>>>> f7e3aafb8b8e8f7cdc230cba01d12e5a477c5d34
         </a>
         <button id="theme-toggle">Toggle Dark Mode</button>
 
@@ -44,7 +39,6 @@ include("connection.php");
             <p>Schon Benutzer? <a href="index2.php">Anmelden</a></p>
         </div>
 
-<<<<<<< HEAD
         <footer id="footer">
             <div class="footer-box">
                 <span id="footer-nav">Website made by Friedrich, Kevin, Berkay </span>
@@ -68,14 +62,5 @@ include("connection.php");
                     });
                 });
             </script>
-=======
-        <!-- Optional: JavaScript-Validierung -->
-        <script>
-
-        </script>
-        
-        <script src="theme-toggle.js"></script>
-
->>>>>>> f7e3aafb8b8e8f7cdc230cba01d12e5a477c5d34
     </body>
 </html>

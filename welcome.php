@@ -132,8 +132,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
     <body>
     <button id="theme-toggle">Toggle Dark Mode</button>
 
+
         
-<<<<<<< HEAD
             <h2 id="headline-Tipp">Jetzt tippen</h2>
 
             <div class="tabelle-box2">
@@ -150,21 +150,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
                 <label for="getippte_tore_heimteam">Tore: <?php echo $heimteam_name?></label>
                 <input type="text" name="getippte_tore_heimteam" required>
 
-                <label for="getippte_tore_auswaertsteam">Tore: <?php echo $auswaertsteam_name?></label>
-                <input type="text" name="getippte_tore_auswaertsteam" required>
+            <label for="getippte_tore_auswaertsteam">Tore: <?php echo $auswaertsteam_name?></label>
+            <input type="text" name="getippte_tore_auswaertsteam" required>
 
-                <input type="submit" name="submit" value="Tipp eintragen">
-                </form>
-            </div>
-
-            <footer id="footer">
-                <div class="footer-box">
-                    <span id="footer-nav">Website made by Friedrich, Kevin, Berkay </span>
-                </div>
-            </footer>
+            <input type="submit" name="submit" value="Tipp eintragen">
+            </form>
 
             <script>document.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', function(e) {
+            link.addEventListener('click', function(e) {
                 e.preventDefault(); // Verhindert die sofortige Weiterleitung
                 const newUrl = this.href;
 
@@ -181,33 +174,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
                 });
             </script>
 
-        </body>
-=======
-    
-    <h2>Tipp eintragen</h2>
-    <p>Samstags-Top-Spiel:</p>
-    <ul>
-        
-        <li>Heimteam: <?php echo $heimteam_name; ?> </li>
-        <li>Auswärtsteam: <?php echo $auswaertsteam_name; ?> </li>
-    </ul>
-    
-    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-    <input type="hidden" name="loggedInUser" value="<?php echo $LoggedInUser; ?>">
-    <input type="hidden" name="spielid" value="<?php echo $latest_game_id; ?>">
-    <label for="getippte_tore_heimteam">Tore: <?php echo $heimteam_name?></label>
-    <input type="text" name="getippte_tore_heimteam" required>
-
-    <label for="getippte_tore_auswaertsteam">Tore: <?php echo $auswaertsteam_name?></label>
-    <input type="text" name="getippte_tore_auswaertsteam" required>
-
-    <input type="submit" name="submit" value="Tipp eintragen">
-</form>
-    
-    <script src="theme-toggle.js"></script>
-
     </body>
->>>>>>> f7e3aafb8b8e8f7cdc230cba01d12e5a477c5d34
     </html>
 
 
