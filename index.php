@@ -23,7 +23,7 @@
             <h1 class="mb-0" style="margin-left: 15px;">Bundesliga Tabelle</h1>
         </div>
         <div class="header-right"> <!-- Unchanged -->
-            <a href="index2.php" class="btn btn-primary mr-2">Tippen</a>
+            <a href="index2.php" class="btn btn-danger mr-2">Tippen</a>
             <button id="theme-toggle" class="btn btn-secondary">Mode</button>
         </div>
     </header>

@@ -353,12 +353,7 @@ tr:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.5
-  ); /* Optional: leichter Overlay-Hintergrund */
+  background-color: rgba(0,0,0,0.5); /* Optional: leichter Overlay-Hintergrund */
   z-index: 1000; /* Hoch genug, um über anderen Elementen zu stehen */
   animation: expandFade 1s;
 }
