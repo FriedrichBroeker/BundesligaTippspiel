@@ -19,16 +19,24 @@
    // Hole den Benutzernamen aus der Session
     $LoggedInUser = $_SESSION['username'];
 
-    // Container, der Bild und Willkommensnachricht umfasst
-    echo "<div class='header-container'>";
+    // Start the header container with Bootstrap classes
+    echo "<header class='d-flex justify-content-between align-items-center p-3'>";
 
-    // Fügen Sie hier das Bild ein
-    echo "<img src='logo.png' alt='Bundesliga Logo' class='bundesliga-logo' style='vertical-align: middle;'>";
-
-    // Willkommensnachricht
-    echo "<h1 style='display: inline; margin-left: 20px;'>Willkommen, $LoggedInUser!</h1>";
-
+    // Left container for logo and welcome message
+    echo "<div class='d-flex justify-content-center align-items-center'>";
+        // Insert the image
+        echo "<img src='logo.png' alt='Bundesliga Logo' class='bundesliga-logo' id='small-logo'>";
+        // Welcome message
+        echo "<h1 class='ml-2'>Willkommen, $LoggedInUser!</h1>"; // Bootstrap's margin-left class
     echo "</div>";
+
+    // Right container for the button, aligned to the right
+    echo "<div class=''>";
+        echo "<button id='theme-toggle' class='btn btn-secondary'>Mode</button>";
+    echo "</div>";
+
+    echo "</header>"; // End the header container
+
 
 
     include("connection.php");
@@ -125,13 +133,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Fjalla+One&family=Josefin+Sans:wght@700&family=Kanit:wght@700&family=Kdam+Thmor+Pro&family=Roboto:ital,wght@1,900&family=Rubik:wght@500&family=Vina+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="style.css" id="theme-link">
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     </head>
     <body>
-    <button id="theme-toggle">Toggle Dark Mode</button>
-
 
         
             <h2 id="headline-Tipp">Jetzt tippen</h2>
