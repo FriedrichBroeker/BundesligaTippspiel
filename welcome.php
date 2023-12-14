@@ -25,7 +25,9 @@
     // Left container for logo and welcome message
     echo "<div class='d-flex justify-content-center align-items-center'>";
         // Insert the image
-        echo "<img src='logo.png' alt='Bundesliga Logo' class='bundesliga-logo' id='small-logo'>";
+        echo "<a href='index.php'>
+            <img src='logo.png' alt='Bundesliga Logo' class='bundesliga-logo' id='small-logo'>
+            </a>";
         // Welcome message
         echo "<h1 class='ml-2'>Willkommen, $LoggedInUser!</h1>"; // Bootstrap's margin-left class
     echo "</div>";
@@ -139,6 +141,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
     </head>
     <body>
 
+    <div id="logo-container" style="display:none">
+            <img src="logo.png" alt="Logo">
+        </div>
         
             <h2 id="headline-Tipp">Jetzt tippen</h2>
 
