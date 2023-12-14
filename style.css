@@ -31,8 +31,7 @@ h1 {
 
 #table-container {
   width: 98%;
-  margin-left: 10px;
-  margin-right: 20px;
+  margin: 20px auto;
   padding: 10px;
   overflow-x: auto;
   background-color: #fff;

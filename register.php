@@ -43,7 +43,7 @@ include("connection.php");
 
         <footer id="footer">
             <div class="footer-box">
-                <span id="footer-nav">Website made by Friedrich, Kevin, Berkay </span>
+                <span id="footer-nav">Website made by Berkay, Friedrich, Kevin </span>
             </div>
         </footer>
 

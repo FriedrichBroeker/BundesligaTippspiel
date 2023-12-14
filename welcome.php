@@ -147,14 +147,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
                 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
                 <input type="hidden" name="loggedInUser" value="<?php echo $LoggedInUser; ?>">
                 <input type="hidden" name="spielid" value="<?php echo $latest_game_id; ?>">
-                <label for="getippte_tore_heimteam">Tore: <?php echo $heimteam_name?></label>
+                <label for="getippte_tore_heimteam"> <?php echo $heimteam_name?></label>
                 <input type="text" name="getippte_tore_heimteam" required>
 
-            <label for="getippte_tore_auswaertsteam">Tore: <?php echo $auswaertsteam_name?></label>
+            <label for="getippte_tore_auswaertsteam"> <?php echo $auswaertsteam_name?></label>
             <input type="text" name="getippte_tore_auswaertsteam" required>
 
             <input type="submit" name="submit" value="Tipp eintragen">
             </form>
+
+            <footer id="footer">
+            <div class="footer-box">
+                <span id="footer-nav">Website made by Berkay, Friedrich, Kevin </span>
+            </div>
+            </footer>
 
             <script>document.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', function(e) {
