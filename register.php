@@ -35,7 +35,7 @@ include("connection.php");
             <label id="pw-style">Passwort: </label>
             <input class="nb-email-input" type="password" id="pass" name="pass" required><br><br>
             <label>Passwort bestätigen: </label>
-            <input class="nb-email-input" type="password" id="pass_confirm" name="pass_confirm" required><br><br>
+            <input class="nb-email-input2" type="password" id="pass_confirm" name="pass_confirm" required><br><br>
             <input type="submit" id="btn" value="Registrieren" name="register"/>
             </form>
             <p>Schon Benutzer? <a href="index2.php">Anmelden</a></p>

@@ -50,7 +50,7 @@
     $query = "SELECT username, punktzahl FROM login ORDER BY punktzahl DESC LIMIT 6";
     $result = mysqli_query($conn, $query);
     if ($result) {
-        echo "<h4>Top 5 Punktestand:</h4>";
+        echo "<h4 id='top5' >Top 5 Punktestand:</h4>";
         echo "<table border='3' id='table-container2'>";
         echo "<tr><th>Name</th><th>Punkte</th></tr>";
 
@@ -148,34 +148,40 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
 
         
         
-            <h2 id="headline-Tipp">Jetzt tippen</h2>
+        <div  id="headline-Tipp">
+                <h2>Jetzt tippen</h2>
+            </div>
 
             <div class="tabelle-box2">
                 <p>Top-Spiel am Wochenende:</p>
                 <ul>
                     
-                    <li>Heimteam: <?php echo $heimteam_name; ?> </li>
-                    <li>Auswärtsteam: <?php echo $auswaertsteam_name; ?> </li>
+                    <p>Heimteam: <?php echo $heimteam_name; ?> </li>
+                    <p> Auswärtsteam: <?php echo $auswaertsteam_name; ?> </li>
                 </ul>
                 
                 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
                 <input type="hidden" name="loggedInUser" value="<?php echo $LoggedInUser; ?>">
                 <input type="hidden" name="spielid" value="<?php echo $latest_game_id; ?>">
-                <label for="getippte_tore_heimteam"> <?php echo $heimteam_name?></label>
+                <label for="getippte_tore_heimteam">Tore: <?php echo $heimteam_name?></label>
                 <input type="text" name="getippte_tore_heimteam" required>
 
-            <label for="getippte_tore_auswaertsteam"> <?php echo $auswaertsteam_name?></label>
+            <label for="getippte_tore_auswaertsteam">Tore: <?php echo $auswaertsteam_name?></label>
             <input type="text" name="getippte_tore_auswaertsteam" required>
 
-            <input type="submit" name="submit" value="Tipp eintragen">
+            <input type="submit" name="submit" class='btn btn-danger mr-2' value="Tipp eintragen">
             </form>
-
-            
-
-            <footer id="footer">
-            <div class="footer-box">
-                <span id="footer-nav">Website made by Berkay, Friedrich, Kevin </span>
+            <div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
             </div>
+            <footer id="footer">
+                <div class="footer-box">
+                    <span id="footer-nav">Website made by Friedrich, Kevin, Berkay </span>
+                </div>
             </footer>
 
             <script>document.querySelectorAll('a').forEach(link => {
@@ -196,7 +202,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
                 });
             </script>
             <script src="theme-toggle.js"></script>
-            <script src="tippen.js"></script>
+            
 
             
 

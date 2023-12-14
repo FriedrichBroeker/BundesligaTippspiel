@@ -314,6 +314,13 @@ tr:hover {
   padding: 0.4rem;
 }
 
+.nb-email-input2 {
+  width: 18%;
+  height: 35px;
+  border: var(--border-style) var(--weiss);
+  padding: 0.4rem;
+}
+
 #btn {
   font-family: "Rubik", sans-serif;
   color: white;
@@ -384,18 +391,34 @@ tr:hover {
 }
 
 #headline-Tipp {
-  margin-top: 50px;
+  margin-top: 67px;
+  margin-bottom: 0;
+  padding-top: 0.05rem;
+  padding-bottom: 0.05rem;
   text-align: center;
+  background-color: #333;
+}
+
+#headline-Tipp > h2 {
+  color: #fff;
+  margin-top: 12px;
+  margin-bottom: 12px;
 }
 
 .tabelle-box2 {
+  height: 250px;
+  width: auto;
   text-align: center;
   background-color: #ddd;
   padding-top: 20px;
-  padding-bottom: 35px;
+  padding-bottom: 20px;
   margin-bottom: 10px;
 }
 
+#top5 {
+  text-align: center;
+  font-size: 1.5rem;
+}
 /* === FOOTER === */
 
 #footer {
@@ -419,13 +442,4 @@ tr:hover {
   margin-top: 50px;
 }
 
-#matches-container{
-  /* Make the containers smaller and give some padding */
-  width: 48%;
-  padding: 10px;
-  box-sizing: border-box;
-  font-size: 10px;
-  .team-logo {
-      width: 10px;
-  }
-}
+

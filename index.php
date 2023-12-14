@@ -35,9 +35,7 @@
     <script src="script.js"></script>
     <script src="theme-toggle.js"></script>
     <script async data-id="8618761453" id="chatling-embed-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
 
     <footer id="footer">
         <div class="footer-box">
