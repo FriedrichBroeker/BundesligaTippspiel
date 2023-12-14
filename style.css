@@ -256,10 +256,7 @@ tr:hover {
 }
 
 /* Stil für Tipp-Eingabefelder */
-.tip-input {
-  /* width: 50px; */
-  /* margin: 0 5px; */
-}
+
 
 @media screen and (max-width: 768px) {
   body {
@@ -287,10 +284,7 @@ tr:hover {
     width: 40px; /* Größeres Logo */
   }
 
-  .tip-input {
-    /* width: 60px; */ /* Größere Eingabefelder */
-    /* font-size: medium; */ /* Größere Schrift in Eingabefeldern */
-  }
+  
 }
 
 /* === Tippspiel-Anmeldung (index2.php) === */
