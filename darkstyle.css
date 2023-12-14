@@ -179,7 +179,7 @@ tr:hover {
     justify-content: space-between;
     padding: 10px;
     margin: 20px auto;
-    max-width: 80%;
+    max-width: 50%;
     border: 1px solid #ddd;
     margin-bottom: 10px;
     border-radius: 5px;
@@ -343,7 +343,7 @@ tr:hover {
 }
 
 #table-container2 {
-    width: 78%;
+    width: 48%;
     margin: 20px auto;
     padding: 10px;
     overflow-x: auto;
@@ -388,3 +388,14 @@ tr:hover {
     margin-top: 50px;
   }
   
+  #matches-container{
+    /* Make the containers smaller and give some padding */
+    width: 48%;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 11px;
+    .team-logo {
+        width: 8px;
+        height: 8px;
+    }
+}

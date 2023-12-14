@@ -209,7 +209,7 @@ tr:hover {
   justify-content: space-between;
   padding: 10px;
   margin: 20px auto; /* Zentriert die Box und fügt horizontalen Abstand hinzu */
-  max-width: 80%; /* Begrenzt die maximale Breite */
+  max-width: 50%; /* Begrenzt die maximale Breite */
   border: 1px solid #ddd;
   margin-bottom: 10px;
   border-radius: 5px;
@@ -257,8 +257,8 @@ tr:hover {
 
 /* Stil für Tipp-Eingabefelder */
 .tip-input {
-  width: 50px;
-  margin: 0 5px;
+  /* width: 50px; */
+  /* margin: 0 5px; */
 }
 
 @media screen and (max-width: 768px) {
@@ -288,8 +288,8 @@ tr:hover {
   }
 
   .tip-input {
-    width: 60px; /* Größere Eingabefelder */
-    font-size: medium; /* Größere Schrift in Eingabefeldern */
+    /* width: 60px; */ /* Größere Eingabefelder */
+    /* font-size: medium; */ /* Größere Schrift in Eingabefeldern */
   }
 }
 
@@ -385,7 +385,7 @@ tr:hover {
 }
 
 #table-container2 {
-  width: 78%;
+  width: 48%;
   margin: 20px auto;
   padding: 10px;
   overflow-x: auto;
@@ -428,4 +428,15 @@ tr:hover {
 
 #footer-style {
   margin-top: 50px;
+}
+
+#matches-container{
+  /* Make the containers smaller and give some padding */
+  width: 48%;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 10px;
+  .team-logo {
+      width: 10px;
+  }
 }

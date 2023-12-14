@@ -34,28 +34,11 @@ document.addEventListener('DOMContentLoaded', function() {
             const team1Element = createTeamElement(match.team1);
             const team2Element = createTeamElement(match.team2);
             teamsContainer.appendChild(team1Element);
-            
             teamsContainer.appendChild(team2Element);
-        
-            // Tippfelder
-            const tipContainer = document.createElement('div');
-            tipContainer.className = 'tip-container';
-            const tipInput1 = document.createElement('input');
-            tipInput1.type = 'number';
-            tipInput1.className = 'tip-input';
-            const tipInput2 = document.createElement('input');
-            tipInput2.type = 'number';
-            tipInput2.className = 'tip-input';
-            tipContainer.appendChild(tipInput1);
-            tipContainer.appendChild(document.createTextNode(':'));
-            tipContainer.appendChild(tipInput2);
         
             // Fügt die Elemente zum Spielcontainer hinzu
             matchElement.appendChild(dateTimeContainer);
             matchElement.appendChild(teamsContainer);
-            matchElement.appendChild(tipContainer);
-            container.appendChild(matchElement);
-
             container.appendChild(matchElement);
         });
         
@@ -76,11 +59,8 @@ document.addEventListener('DOMContentLoaded', function() {
             teamElement.appendChild(teamName);
         
             return teamElement;
-        }
-        
-        
+        } 
     }
 
     fetchMatches();
 });
-

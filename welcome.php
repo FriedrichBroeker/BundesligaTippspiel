@@ -51,7 +51,7 @@
     $result = mysqli_query($conn, $query);
     if ($result) {
         echo "<h4>Top 5 Punktestand:</h4>";
-        echo "<table border='3' id='table-container'>";
+        echo "<table border='3' id='table-container2'>";
         echo "<tr><th>Name</th><th>Punkte</th></tr>";
 
         while ($row = mysqli_fetch_assoc($result)) {
@@ -64,6 +64,7 @@
         }
         echo "</table>";
     }
+
 
 
 
@@ -144,6 +145,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
     <div id="logo-container" style="display:none">
             <img src="logo.png" alt="Logo">
         </div>
+
+        
         
             <h2 id="headline-Tipp">Jetzt tippen</h2>
 
@@ -166,6 +169,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
 
             <input type="submit" name="submit" value="Tipp eintragen">
             </form>
+
+            
 
             <footer id="footer">
             <div class="footer-box">
@@ -191,6 +196,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
                 });
             </script>
             <script src="theme-toggle.js"></script>
+            <script src="tippen.js"></script>
+
+            
 
 
     </body>
